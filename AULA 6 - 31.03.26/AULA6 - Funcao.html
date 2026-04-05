@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula_Função</title>
+    <meta charset="UTF-8">
+    <script TYPE="text/javascript">
+
+        let cotacaoDolar = 5.19
+        
+        /*let valor1 = (100 / cotacaoDolar).toFixed(2).replace(',',',')
+        let valor2 = (200 / cotacaoDolar).toFixed(2).replace(',',',')
+        let valor3 = (500 / cotacaoDolar).toFixed(2).replace(',',',')
+        let valor4 = (1000 / cotacaoDolar).toFixed(2).replace(',',',')
+        document.write(`${valor1} <br>`)
+        document.write(`${valor2} <br>`)
+        document.write(`${valor3} <br>`)
+        document.write(`${valor4} <br>`)*/
+
+        function converterRealParaDolar(valor, dolar) {
+            return 'U$$ ' + (valor / dolar).toFixed(2).replace('.',',') + '<br>'
+        }
+
+        function converterRealDolar(valor, dolar) {
+            document.write((valor / dolar).toFixed(2).replace('.', ',') + '<br>')
+        }
+        
+        document.write(converterRealParaDolar(10000, cotacaoDolar))
+        document.write(converterRealParaDolar(12000, cotacaoDolar))
+        document.write(converterRealParaDolar(15000, cotacaoDolar))
+
+        converterRealDolar(10, cotacaoDolar)
+        converterRealDolar(50, cotacaoDolar)
+
+    </script>
+  
+</head>
+<body>
+    
+</body>
+</html>

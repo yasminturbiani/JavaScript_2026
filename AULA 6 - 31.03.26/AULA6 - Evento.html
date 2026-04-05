@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Aula_Função</title>
+    <meta charset="UTF-8">
+    <script TYPE="text/javascript">
+        function converterRealParaDolar(valor, dolar) {
+            return 'U$$ ' + (valor / dolar).toFixed(2).replace('.',',') + '<br>'
+        }
+   
+        window.onload = function() {
+            document.getElementById('btnConverter').onclick = function() {
+                let dolar = document.getElementById('dolar').value 
+                let valor = document.getElementById('valor').value
+                let resultado = converterRealParaDolar(valor, dolar)
+                document.getElementById('resultado').innerHTML ='Resultado: ' + resultado
+            }
+        }
+
+    </script>
+  
+</head>
+<body>
+    <h1>Converção Real / Dólar</h1>
+    <b>Dólar: <b></b><input type="number" id="dolar"value="5.19">
+    <br><br>
+    <p>Valor: </p><input type="number" id="valor">
+    <br><br>
+    <!-- <button onclick="alert('ok')">Converter</button> -->
+     <select id = "tipo">
+        <option value="1"> Real para Dolar</option>
+        <option value="2"> Dolar para Real</option>
+     </select>
+     <button id="btnConverter">Converter</button>
+     <p><b id="resultado">Resultado: </b></p>
+
+</body>
+</html>

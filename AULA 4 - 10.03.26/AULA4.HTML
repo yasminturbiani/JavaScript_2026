@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <title>AULA 4</title>
+        <meta charset="UTF-8">
+
+    </head>
+
+    <body>
+    
+        <script type="text/javascript">
+
+            // let nota1 = parseFloat(prompt('Digite a primeira nota: '))
+    
+            // if (!isNaN(nota1)) {
+            //     let nota2 = parseFloat(prompt('Digite a segunda nota: '))
+
+            //     if (!IsNaN(nota2)){
+            //         let media = (nota1 + nota2) / 2
+            //         alert(`A sua média é ${media}`)
+            //         document.write(`A média é ${media}`)
+
+            //     } else {
+            //         alert('Digite um número seu animal! ')
+            //     }
+
+            // } else{
+            //     alert('Digite um número seu animal! ')
+            // }
+
+            // document.write('<br>')
+
+            // let cidade = prompt("Informe sua cidade: ").toUpperCase()
+
+            // if (cidade == 'TAQUARITINGA') {
+            //     document.write(`${cidade} é conhecida pelo seu carnaval!`)
+            // } else if (cidade == 'MONTE ALTO') {
+            //     document.write(`${cidade} é conhecida pelo seu museu!`)
+            // } else if (cidade == 'MATÃO' || cidade == 'MATAO') {
+            //     document.write(`${cidade} é conhecida pelas suas indústrias!`)
+            // } else if (cidade == 'DOBRADA' || cidade == 'GUARIROBA') {
+            //     document.write(`${cidade} é conhecida pelas suas festas!`)
+            // } else {
+            //     document.write(`${cidade} não identificada!`)
+            // }
+            
+            // document.write('<br>')
+
+            // switch (cidade) {
+            //     case 'TAQUARITINGA':
+            //         document.write(`${cidade} é conhecida pelo seu carnaval!`)
+            //         break
+            //     case 'MONTE ALTO':
+            //         document.write(`${cidade} é conhecida pelo seu museu!`)
+            //         break
+            //     case 'MATÃO':
+            //     case 'MATAO':
+            //         document.write(`${cidade} é conhecida pelas suas indústrias!`)
+            //         break
+            //     case 'DOBRADA':
+            //     case 'GUARIROBA':
+            //         document.write(`${cidade} é conhecida pelas suas festas!`)
+            //         break
+            //     default:
+            //         document.write(`${cidade} não identificada!`)
+            // }
+
+            // document.write('<br>')
+            // document.write((cidade == 'TAQUARITINGA' || cidade == 'MATAO') ? 'Possui Fatec' : 'Possui outra instituição')
+
+
+            //ATIVIDADE:
+
+            // PEDE DOIS NUMEROS
+            // TESTA SE É NUMERO
+            // TESTA A OPERAÇÃO
+            // CALCULO
+            // SE FOR DIVISÃO, TESTA SE NÃO É 0
+            // MOSTRA PRO USUARIO
+
+            let num1 = parseFloat(prompt('Digite o primeiro número: '))
+            let num2 = parseFloat(prompt('Digite o segundo número: '))
+
+            if (!isNaN(num1) && !isNaN(num2)){
+                alert('Operações Disponiveis:\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n')
+                // document.write('1 - Adição<br>')
+                // document.write('2 - Subtração<br>')
+                // document.write('3 - Multiplicação<br>')
+                // document.write('4 - Divisão<br>')
+                let op = parseInt(prompt('Operação: '))
+
+                if (!isNaN(op)){
+                    switch(op){
+
+                        case 1:     //Somar
+                            let soma = num1 + num2
+                            document.write(`A soma de ${num1} + ${num2} = ${soma}<br>`)
+                            break
+
+                        case 2:     //Subtrair
+                            let sub = num1 - num2
+                            document.write(`A subtração de ${num1} - ${num2} = ${sub}<br>`)
+                            break
+
+                        case 3:     //Multiplicação
+                            let mult = num1 * num2
+                            document.write(`A multiplicação de ${num1} x ${num2} = ${mult}<br>`)
+                            break
+
+                        case 4:     //Divisão
+                            if (num2 != 0){
+                                let div = num1 / num2
+                                document.write(`A divisão de ${num1} / ${num2} = ${div}<br>`)
+                            } else {
+                                document.write('Digite um número!<br>')
+                            }
+                            
+                            break
+                            
+                            default:
+                            document.write("Operação inválida")
+                    }
+
+                } else {
+                    document.write('Digite um número seu animal!<br>')
+                }
+
+            } else {
+                document.write('Digite um número seu animal!<br>')
+            }
+
+        </script>
+
+    </body>
+
+</html>
