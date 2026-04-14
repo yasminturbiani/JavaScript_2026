@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    
+    <head>
+
+        <title>Aula - Função</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="ATV_CSS.css">
+        <script type="text/javascript">
+
+            function converterRealParaDolar(valor, dolar) {
+                return 'US$ ' + (valor / dolar).toFixed(2).replace('.',',') + '<br>'
+            }
+
+            function converterDolarParaReal(valor, dolar) {
+                return 'R$ ' + (dolar * valor).toFixed(2).replace('.',',') + '<br>'
+            }
+
+            window.onload = function() {
+                document.getElementById('btnConverter').onclick = function() {
+                    let dolar = document.getElementById('dolar').value
+                    let valor = document.getElementById('valor').value
+                    
+                    if ((document.getElementById('tipo').value) == "1") {
+                        let resultado = converterRealParaDolar(valor, dolar)
+                        document.getElementById('resultado').innerHTML = 'Resultado: ' + resultado
+                    }
+                    else if ((document.getElementById('tipo').value) == "2") {
+                        let resultado = converterDolarParaReal(valor, dolar)
+                        document.getElementById('resultado').innerHTML = 'Resultado: ' + resultado
+                    }
+
+                    
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <header>
+             <h1>CONVERSÃO DE MOEDAS</h1>
+        </header>
+        <main>
+            <div class="container">
+
+            <b>Valor: </b><input type="number" id="valor" value="0.19">
+            <br><br>
+            <b>Dólar: </b><input type="number" id="dolar" value="5.19">
+            <br><br>
+            <!-- <button onclick="alert('ok')">Converter</button> -->
+            
+            <select id="tipo" >
+                <option value="1">Real para Dólar</option>
+                <option value="2">Dólar para Real</option>
+            </select>
+            <button id="btnConverter">CONVERTER</button>
+            <br>
+            
+            <p><b id="resultado">Resultado: </b></p>
+            </div>
+        </main>
+        <footer>
+             <p id="rodape">YASMIN TURBIANI</p>
+        </footer>
+
+       
+       
+
+    </body>
+
+</html>

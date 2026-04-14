@@ -1,0 +1,41 @@
+header{
+            background:  rgb(45, 141, 117);
+            width: 100%;
+            height: 100px;
+            padding: 20px;
+            text-align: center;
+            color:whitesmoke
+        }
+        nav{
+            background:  rgb(142, 218, 199);
+            height: 90px;
+            padding: 10px 0px 0px 10px;
+        }
+        main{
+            background:  rgb(243, 255, 252);
+            height: 615px;
+            padding: 10px 0px 0px 10px;
+        }
+        footer{
+            background: rgb(63, 117, 104) ;
+            height: 50px;
+            padding: 3px 0px 0px 10px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            display: inline-block;
+            color:black
+        }
+        a:visited {
+            color: black;
+        }
+        a:hover {
+            color: rgb(218, 141, 0);
+        }
+        .texto {
+            font-family:'Courier New', Courier, monospace;
+        }
+        #rodape {
+            color: white;
+        }
